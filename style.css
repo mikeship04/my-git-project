@@ -76,11 +76,17 @@ strong {
     color: hsl(var(--yellow));
 }
 
+a {
+    color: hsl(var(--neon-pink));
+}
+
+a:visited {
+    color: hsl(var(--yellow));
+}
+
 a:hover,
 a:active {
-  color: hsl(var(--neon-pink));
-  top: -0.03rem;
-  left: -0.03rem;
+    color: hsl(var(--neon-pink));
 }
 
 p:not(:first-child) {
@@ -92,7 +98,7 @@ p:last-child {
 }
 
 .links .container,
-[class^="link"] {
+[class^="links"] {
     display: block;
     margin-top: 1em;
     border: 0.2rem solid hsl(var(--yellow));
@@ -200,7 +206,7 @@ nav ul {
     flex-direction: column;
 }
 
-[id="about"] > .container {
+[id="Aboutme"] > .container {
     width: 100%;
     border: 0.4rem solid hsl(var(--neon-blue));
     padding: 1.5em;
@@ -235,3 +241,4 @@ nav ul {
     background-color: hsl(var(--dark-blue));
     border-image: var(--border-image);
 }
+
