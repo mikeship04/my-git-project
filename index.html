@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
         <link rel="stylesheet" href="style.css" />
-        <title>My Personal Website</title>
+        
+        <title>The Journey Begins</title>
+        <meta name="intro" content="An introduction to Modern web development through
+        bootcamp education.  Created and Updated by Mike Shippy." />
+        
     </head>
     <body>
-        <script src="script.js"></script>
-        <h1>Junior web developer: Mike Shippy</h1>
-        <p>Click photos to continue.</p>
-            <nav id="main navigation">
-                <div class="container">
-                <div class="row">
-                    <div class="column">
-                        <a href="aboutMe.html">
-                            <img src="./images/Selfie.jpg"
-                            alt="an image of Mike Shippy"
-                            title="About me."/>
-                        </a>
+        <header>
+            <div class="container">
+                <h1>The Journey Begins</h1>
+                <h2>An introduction to Modern web development through 
+                Flatiron School education.</h2>
+                <p>Created and updated by <a href="https://twitter.com/MikeShip04">Mike Shippy</a></p>
+            </div>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="#Aboutme">About Me</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" tabIndex="-1">
+        <div class="container">
+            <article id="about">
+                <section class="container">
+                    <h2>About me</h2>
+                    <p>Hello my name is Mike Shippy, a 35 year old career changer from Phoenix Arizona.  After almost 20 years in the hospitality industry I was standing in a ballroom
+                        on new years eve bartending a private event, instead of spending some much needed time with my family.  At this point I knew it was time for a change.  After a lot of research
+                        and personal education on the matter I decided to get everything in order so I could attend the <strong>Flatiron School</strong>.  I listened to hundreds of episodes of
+                        <a href="https://www.codenewbie.org/podcast" target="_blank">the code newbie podcast</a> and heard Saron interview countless inspiring people with similar stories and backgrounds
+                        making the leap to better their situations.  Knowing I was not alone in my search for something greater and ever eager for a new challenge I made the choice to 
+                        quit my job so I could focus on school full time.
+                    </p>
+                    <p>Although I am still a newbie, this site will be continuously updated as I complete my curriculum at
+                        Flatiron School to showcase my abilitiy to learn and execute. 
+                    </p>
+                </section>
+            </article>
+            <article id="Projects">
+                <section class="container">
+                    <h2>Projects</h2>
+                    <p>This is where I will house projects throughout my coursework at <strong>Flatiron School.</strong>Please check back soon for updates!</p>
+                </sectioin>
+            </article>
+            <article id="contact">
+                <section class="container">
+                    <h2>Contact Me</h2>
+                    <p>This is where you can get ahold of me and see what i'm up to.  My inbox is always open so feel free to reach out!</p>
+                </section>
+                <footer id="links">
+                    <div class="container">
+                        <h3>Contact Info</h3>
+                        <a href="https://github.com/mikeship04/my-git-project" class="link-github">Github</a>
+                        <a href="https://www.instagram.com/shipreckt/?hl=en" class="link-Instagram">instagram</a>
+                        <a href="https://twitter.com/MikeShip04" class="link-twittercontact">Twitter</a>
                     </div>
-                    <div class="column">
-                        <a href="projects.html">
-                            <img src="./images/techstock.jpg"
-                            alt="a collaborative workspace"
-                            title="projects"/>
-                        </a>
-                        </div>
-                    <div class="column">
-                    <a href="contact.html">
-                        <img src="./images/contact.jpg"
-                        alt="a contacts image"
-                        title="Contact info."/>
-                    </a>
-                    </div>
-                </div></div>
-            </nav>
+                </footer>
+            </article>
+        </div>
+    </main>
 </html>
