@@ -1,35 +1,237 @@
-body {
-    background: lightblue;
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&display=swap");
+
+:root {
+  --font-body: "Share Tech Mono", monospace;
+  --font-headings: "Audiowide", cursive;
+  --neon-pink: 341, 100%, 58%;
+  --neon-blue: 184, 96%, 46%;
+  --very-light-blue: 190, 100%, 91%;
+  --dark-blue: 240, 95%, 9%;
+  --yellow: 44, 97%, 72%;
+  --border: hsl(var(--neon-blue)), hsl(var(--neon-pink)), hsl(var(--neon-blue));
+  --padding-wrapper: 1.5em;
+  --border-image: linear-gradient(-45deg, var(--border)) 10% stretch;
+  --background-lines: linear-gradient(
+      hsla(184, 96%, 46%, 0) 90%,
+      hsla(184, 96%, 46%, 0.25) 95%
+    )
+    top left / 100% 0.5rem;
 }
 
-h1 {
-    text-align: center;
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-p {
-    text-align: center;
-    font-size: 18px;
+
+body {
+    padding: 1em;
+    background: hsl(var(--dark-blue)) var(--background-lines);
+    color: hsl(var(--very-light-blue));
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 0.7rem + 0.9vw, 4rem);
+    line-height: 1.2;
+    overflow-x: hidden;
+    max-width: 112.5rem;
 }
-nav {
-    width: 25%;
+
+@media (min-width: 48rem) {
+    body {
+        margin-left: 13em;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    z-index: 2;
+    position: relative;
+    color: hsl(var(--yellow));
+    font-family: var(--font-headings);
+    text-transform: uppercase;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
-    text-align: center;
-}
-.row {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.column {
-    display: flex;
-    position: relative;
-    flex: 33.33%;
-    padding: 5px;
-}
-img {
-    width: 400px;
-    height: auto;
 }
 
+h2,
+h3,
+h4 {
+    z-index: 3;
+    position: relative;
+    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 1rem + 2vw, 3rem);
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+strong {
+    color: hsl(var(--yellow));
+}
+
+a:hover,
+a:active {
+  color: hsl(var(--neon-pink));
+  top: -0.03rem;
+  left: -0.03rem;
+}
+
+p:not(:first-child) {
+    margin-top: 2em;
+}
+
+p:last-child {
+    margin-bottom: 2em;
+}
+
+.links .container,
+[class^="link"] {
+    display: block;
+    margin-top: 1em;
+    border: 0.2rem solid hsl(var(--yellow));
+    padding: 0.6em 1.2em;
+    color: hsl(var(--neon-blue));
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95em;
+    max-width: 35ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-moz-selection {
+    background-color: hsl(var(--yellow));
+    color: hsl(var(--dark-blue));
+}
+
+::selection {
+    background-color: hsl(var(--yellow));
+    color: hsl(var(--dark-blue));
+}
+
+:focus {
+    outline: 2px solid transparent;
+}
+
+:focus-visible {
+    outline-color: hsl(var(--neon-pink));
+    outline-offset: 2px;
+}
+
+header {
+    width: 100%;
+    border: 0.4rem solid hsl(var(--neon-blue));
+    padding: 1.5em;
+    background-color: hsl(var(--dark-blue));
+    border-image: var(--border-image);
+    text-align: center;
+}
+
+header h1 {
+    max-width: 7ch;
+    font-size: 3em;
+    overflow: hidden;
+    opacity: 0.9;
+}
+/*am i missing a color for twitter link in header2? */
+
+header h2 {
+    margin-top: 0.5em;
+    max-width: 25ch;
+    color: hsl(var(--very-light-blue));
+    font-size: 2em;
+    font-family: var(--font-body);
+    text-transform: none;
+    line-height: 1;
+}
+
+nav {
+    border: 0.4rem solid hsl(var(--neon-blue));
+    margin-top: 2em;
+    border-image: var(--border-image);
+    background-color: hsl(var(--dark-blue));
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+nav li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 33%;
+    flex: 1 1 33%;
+    margin-top: 0;
+    border: 1px solidi hsl(var(--neon-blue));
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 48rem) {
+    nav {
+        position: fixed;
+        left: 1em;
+        top: 3em;
+        width: 12em;
+    }
+}
+
+nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+[id="about"] > .container {
+    width: 100%;
+    border: 0.4rem solid hsl(var(--neon-blue));
+    padding: 1.5em;
+    margin-top: 2em;
+    background-color: hsl(var(--dark-blue));
+    border-image: var(--border-image);
+}
+
+[id="Projects"] > .container {
+    width: 100%;
+    border: 0.4rem solid hsl(var(--neon-blue));
+    padding: 1.5em;
+    margin-top: 2em;
+    background-color: hsl(var(--dark-blue));
+    border-image: var(--border-image);
+}
+
+[id="contact"] > .container {
+    width: 100%;
+    border: 0.4rem solid hsl(var(--neon-blue));
+    padding: 1.5em;
+    margin-top: 2em;
+    background-color: hsl(var(--dark-blue));
+    border-image: var(--border-image);
+}
+
+[id="links"] > .container {
+    width: 100%;
+    border: 0.4rem solid hsl(var(--neon-blue));
+    padding: 1.5em;
+    margin-top: 2em;
+    background-color: hsl(var(--dark-blue));
+    border-image: var(--border-image);
+}
