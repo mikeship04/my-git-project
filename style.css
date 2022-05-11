@@ -5,6 +5,10 @@ body {
 h1 {
     text-align: center;
 }
+p {
+    text-align: center;
+    font-size: 18px;
+}
 nav {
     width: 25%;
     margin-left: auto;
@@ -12,8 +16,20 @@ nav {
     font-size: 24px;
     text-align: center;
 }
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.column {
+    display: flex;
+    position: relative;
+    flex: 33.33%;
+    padding: 5px;
+}
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}   
+    width: 400px;
+    height: auto;
+}
+
